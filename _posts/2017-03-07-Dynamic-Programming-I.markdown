@@ -1,4 +1,4 @@
-###Distinct subsequence
+### Distinct subsequence
 
 Given a string S and a string T, count the number of distinct subsequences of T in S.
 
@@ -9,7 +9,7 @@ S = "rabbbit", T = "rabbit"
 
 Return 3.
 
-####Analysis
+#### Analysis
 
      Let    i = 0, j = 0
             S_i = S[i..m]
@@ -47,7 +47,7 @@ Return 3.
     }
 ```
 
-###Edit distance
+### Edit distance
 
 “Given two words word1 and word2, find the minimum number of steps required to convert word1 to word2. (each operation is counted as 1 step.) You have the following 3 operations permitted on a word:
 
@@ -55,7 +55,7 @@ Insert a character
 Delete a character
 Replace a character”
 
-####Analysis
+#### Analysis
 
       if S[i] == T[j]
         MD(S_i, T_j) = MD(S_i+1, T_j+1)
@@ -91,7 +91,7 @@ Replace a character”
     }
 ```
 
-###Interleaving String
+### Interleaving String
 
 Given s1, s2, s3, find whether s3 is formed by the interleaving of s1 and s2.
 
@@ -103,7 +103,7 @@ s2 = "dbbca",
 When s3 = "aadbbcbcac", return true.
 When s3 = "aadbbbaccc", return false.
 
-####Analysis
+#### Analysis
 
      if S1_i == S3_k && S2_j == S3_k
        interleave = inter(S1_i+1, S2_j, S3_k+1) || inter(S1_i, S2_j+1, S3_k+1)
@@ -156,7 +156,7 @@ When s3 = "aadbbbaccc", return false.
     }
 ```
 
-###Longest palindrome
+### Longest palindrome
 
 Given a string s, find the longest palindromic substring in s. You may assume that the maximum length of s is 1000.
 
@@ -165,7 +165,7 @@ Input: "babad"
 Output: "bab"
 Note: "aba" is also a valid answer.
 
-####Analysis
+#### Analysis
 
      Let P(S_i_j) be whether S_i_j is a palindrome or not
 
