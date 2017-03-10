@@ -7,21 +7,33 @@
 
 # Site settings
 title: 'HCH - Happy Coding!'
-tagline:          ''
 description: > # undefined
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://hchim.github.io" # the base hostname & protocol for your site
-twitter_username: 
+
+name: 'Hui Chen'
 github_username:  hchim
 
-# Dependencies
-markdown:         redcarpet
-pygments:         true
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
-# Permalinks
-permalink:        pretty
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
 
-paginate:         5
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
 
-# Custom vars
-version:          2.0.0
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
