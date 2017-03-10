@@ -1,15 +1,15 @@
 # Site settings
-name: 'HCH - Happy Coding!'
-description: > # undefined
+name: 'Hui's Page'
+description: 'Happy coding!!!'
 
 markdown: kramdown
 highlighter: pygments
-logo: false
-paginate: 10
+logo: assets/images/profile.png
+paginate: 5
 baseurl: /
 domain_name: 'http://hchim.github.io'
 gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
 url:            'http://hchim.github.io'
-author:         'HCH'
+author:         'Hui Chen'
