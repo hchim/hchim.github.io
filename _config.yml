@@ -8,8 +8,8 @@
 # Site settings
 title: 'HCH - Happy Coding!'
 description: > # undefined
-baseurl: "/blog" # the subpath of your site, e.g. /blog
-url: "http://hchim.github.io" # the base hostname & protocol for your site
+baseurl: "/blog/" # the subpath of your site, e.g. /blog
+url: "http://hchim.github.io/blog" # the base hostname & protocol for your site
 
 name: 'Hui Chen'
 github_username:  hchim
