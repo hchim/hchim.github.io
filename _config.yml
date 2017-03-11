@@ -7,9 +7,10 @@ highlighter: pygments
 logo: false
 paginate: 5
 baseurl: /
-domain_name: 'http://hchim.github.io'
+domain_name: 'http://blog.hch.im'
 gems: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url:            'http://hchim.github.io'
+url:            'http://blog.hch.im'
 author:         'Hui Chen'
+biography:      'undefined'
