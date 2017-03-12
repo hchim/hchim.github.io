@@ -14,3 +14,8 @@ gems: [jekyll-paginate]
 url:            'http://blog.hch.im'
 author:         'Hui Chen'
 biography:      'undefined'
+
+# post configs
+disqus: true
+archive: true
+

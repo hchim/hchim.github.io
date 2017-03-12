@@ -1,7 +1,5 @@
 ---
 layout: default
-disqus: true
-archive: true
 post_class: post-template
 ---
 
@@ -13,7 +11,6 @@ post_class: post-template
 </header>
 
 <main class="content" role="main">
-
     <article class="post">
 
         <header class="post-header">
@@ -30,7 +27,7 @@ post_class: post-template
             {{content}}
         </section>
 
-        {% if page.archive %}
+        {% if site.archive %}
         <section class="archive">
             <h5>Archive</h5>
             <ul>
@@ -62,7 +59,7 @@ post_class: post-template
             {% include share.html %}
 
             <!-- Disqus comments -->
-            {% if page.disqus %}
+            {% if site.disqus %}
                 {% include disqus.html %}
             {% endif %}
 

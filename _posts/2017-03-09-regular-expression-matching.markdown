@@ -1,3 +1,7 @@
+---
+layout: post
+---
+
 Implement regular expression matching with support for '.' and '*'.
 
 '.' Matches any single character.
