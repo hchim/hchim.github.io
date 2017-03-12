@@ -17,5 +17,5 @@ biography:      'undefined'
 
 # post configs
 disqus: true
-archive: true
+recentPosts: true
 
