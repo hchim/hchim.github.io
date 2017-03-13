@@ -33,7 +33,7 @@ Return 3.
 
      Finally, table[0][0] = N(S, T)
 
-```
+```java
     public int numDistinct(String s, String t) {
         int[][] table = new int[s.length() + 1][t.length() + 1];
         for (int i = 0, j = t.length(); i <= s.length(); i++)
@@ -74,7 +74,7 @@ Replace a character”
      The value of the last column is [m,...,0]
      The value of the last row is [n,..,0]
      
-```
+```java
     public int minDistance(String s, String t) {
         int[][] table = new int[s.length() + 1][t.length() + 1];
         for (int i = 0, j = t.length(); i <= s.length(); i++)
@@ -120,7 +120,7 @@ When s3 = "aadbbbaccc", return false.
      else
        interleave = false
 
-```
+```java
     public boolean isInterleave(String s1, String s2, String s3) {
         if ((s1.length() + s2.length()) != s3.length()) {
             return false;
@@ -180,7 +180,7 @@ Note: "aba" is also a valid answer.
      else
         P(S_i_j) = false
         
-```
+```java
     public String longestPalindrome(String s) {
         if (s.length() <= 1) {
             return s;

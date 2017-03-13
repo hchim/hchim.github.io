@@ -23,7 +23,7 @@ We can use dynamic programming to solve this problem. For string s, the decode w
   - if s[1] > ‘6’, the decode ways is the same as the substring s[1..n].
 - s[0] > ‘2’ , the decode ways is the same as the substring s[1..n].
 
-```
+```java
 public int numDecodings(String s) {
     if(s == null || s.length() == 0 ) return 0;
     if(s.length() == 1){

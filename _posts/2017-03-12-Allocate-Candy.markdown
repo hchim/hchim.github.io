@@ -16,7 +16,7 @@ What is the minimum candies you must give?
    one more candy than i+1, otherwise allocate one candy. Save the result in table2.
 1. Combine the previous two allocation results. For position i, allocate the max(table1[i], table2[i]) candies.
 
-```
+```java
 public int candySimple(int[] ratings){
     if(ratings == null || ratings.length == 0) 
       return 0;

@@ -34,7 +34,7 @@ The solution tree is shown as follows. We can use depth first search to find out
 ...
 ```
 
-```
+```java
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
         dfs(candidates, target, 0, result, new ArrayList<Integer>());
@@ -93,7 +93,7 @@ Different to I, each number can only be used once. To eliminate the duplicated s
 1. Visit the next level from index i + 1.
 1. Skip the same numbers when traversing each row.
 
-```
+```java
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<List<Integer>> result = new ArrayList<>();
@@ -150,7 +150,7 @@ Output:
 
 We need to add level into dfs search so as to only return the paths of level k.
 
-```
+```java
     public List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> result = new ArrayList<>();
         dfs(k, n, 1, result, new ArrayList<Integer>());

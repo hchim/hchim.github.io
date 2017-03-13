@@ -21,7 +21,7 @@ if S[0..i] is a palindrome
 In the recursive method, duplicated compution exists. We use hash map to store the partitions of
 substring S_i, i is the key.
 
-```
+```java
     public List<List<String>> partition(String s) {
         HashMap<Integer, List<List<String>>> tempResult = new HashMap<>();
         return partitionOfSubStr(s, 0, tempResult);
@@ -82,7 +82,7 @@ Return 1 since the palindrome partitioning ["aa","b"] could be produced using 1 
 The previous method can be optimized. To find out whehter S_i_j is a palindrome or not, we can leverage the result of S_i-1_j-1.
 So, we store palindrome result in a table.
 
-```
+```java
     public boolean[][] palindromeTable(String s) {
         boolean[][] table = new boolean[s.length()][s.length()];
         for (int i = 0; i < s.length(); i++) {

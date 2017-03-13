@@ -33,7 +33,7 @@ Note:
 
 #### The solution:
 
-```
+```java
     public class Solution {
     
     class GraphNode {

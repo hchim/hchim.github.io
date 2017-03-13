@@ -18,7 +18,7 @@ To optimize the code, we need to cut the invalid branches based on the following
 1. The number should not larger than 255.
 1. The depth of a valid path is 4.
 
-```
+```java
     public List<String> restoreIpAddresses(String s){
         List<String> result = new ArrayList<>();
         if(s.length() < 4) 

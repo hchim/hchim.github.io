@@ -17,7 +17,7 @@ Note: The sequence of integers will be represented as a string.
 - Count the occurrence number of the same digit.
 - If the digit changes, put the number and the digit into StringBuffer and start to count the next digit.
 
-```
+```java
 public String countAndSay(int n) {
     if(n < 1) return "";
     String str = "1";

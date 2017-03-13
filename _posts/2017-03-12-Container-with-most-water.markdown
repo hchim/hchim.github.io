@@ -27,7 +27,7 @@ else
    right--
 ```
 
-```
+```java
     public int maxArea(int[] height) {
         if(height == null || height.length <= 1 )
             return 0;

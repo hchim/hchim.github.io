@@ -26,7 +26,7 @@ Following this example, we can implement a recursive solution. However, when we
 check whether we can jump to the end from a position i, some computations are 
 duplicated. So, we can use DP method to store the solution for the subproblems.
 
-```
+```java
 public boolean canJump(int[] A) {
     if(A == null || A.length == 0) 
         return true;
@@ -90,7 +90,7 @@ Assume exist m, such that m + A[m] < j + A[j] and minJump(m) < minJump(j).
 However 1 + minJump(m + A[m]) >= 1 + minJump(j + A[j]) because j + A[j] is on the right off m + A[m].
 So, minJump(m) >= minJump(j) contradicts with the assumption. This proves the greedy method works.
 
-```
+```java
     public int jumpGreedy(int[] A) {
         if(A == null || A.length <= 1) return 0;
         int i = 0, steps = 1, max, maxPos;

@@ -20,7 +20,7 @@ Your algorithm should run in O(n) time and uses constant space.
 - Then we scan from left to right and find out the first missing number.
 
 
-```
+```java
     public int firstMissingPositive(int[] nums) {
         //put number n to position n - 1
         for (int i = 0; i < nums.length;) {

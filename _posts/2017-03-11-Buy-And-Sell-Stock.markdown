@@ -43,7 +43,7 @@ Assume between a foot and the following peak exists day i, such that p[foot] <= 
 and then buy a stock does not influence the final profit. So, whenever p[i] > p[i-1] we make a transaction could 
 simplify the implementation.
 
-```
+```java
 public int maxProfit_simple(int[] prices) {
     if (prices.length <= 1) return 0;
     int totalProfit = 0;
@@ -67,7 +67,7 @@ Max(max_profit(1, i) + max_profit(i+1, n)), 1<= i <=n.
 However, there is duplicated computation in max_profit(i+1, n). To optimize it, we can 
 solve this part in O(n) time complexity first, and then solve the problem in O(n) time.
 
-```
+```java
 public int maxProfit(int[] prices) {
     if (prices.length <= 1) return 0;
     // table[i] saves the max profit from day i to day n

@@ -23,7 +23,7 @@ Given nums = [2, 7, 11, 15], target = 9,
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 
-```
+```java
 public int[] twoSum(int[] numbers, int target) {
   int[] ind = new int[2];  
   HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
@@ -67,7 +67,7 @@ A solution set is:
 
 The complexity of the problem is O(n^2). 
 
-```
+```java
     public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length < 3) {
@@ -130,7 +130,7 @@ Given an array S of n integers, find three integers in S such that the sum is cl
     For example, given array S = {-1 2 1 -4}, and target = 1.
     The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
-```
+```java
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int min = Integer.MAX_VALUE, sum, diff, minDiff = Integer.MAX_VALUE;

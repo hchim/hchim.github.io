@@ -17,7 +17,7 @@ The solution is guaranteed to be unique.
 If we can make the journey, the total gas must not less than the total cost. After we find out 
 the position i with the minimum gas in tank, then start from the i+1 position will make the journey.
 
-```
+```java
 public int canCompleteCircuit(int[] gas, int[] cost) {
  if(gas == null || cost == null) 
         return -1;

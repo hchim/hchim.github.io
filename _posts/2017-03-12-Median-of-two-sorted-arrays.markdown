@@ -25,7 +25,7 @@ The median is (2 + 3)/2 = 2.5
 Since the arrays are sorted. We can try to merge half of the two arrays without copying values.
 We only need to store the last two visited values.
 
-```
+```java
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int len = nums1.length + nums2.length;
         if (len == 1) {

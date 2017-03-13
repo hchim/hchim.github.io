@@ -9,7 +9,7 @@ Write a function to find the longest common prefix string amongst an array of st
 * Find out the minimum length of the strings.
 * Vist each column of characters and find out the first column that break this rule.
 
-```
+```java
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {
             return "";
@@ -59,7 +59,7 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
     * If s[i] was not visited, mark the position of arr[s[i]] = i.
     * else, update the maximum length and reset start position as arr[s[i]] + 1. In addition, set arr[s[i]] = i
 
-```
+```java
     public int lengthOfLongestSubstring(String s) {
         if (s.length() <= 1) {
             return s.length();
@@ -100,7 +100,7 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
  * The top of the stack is the position of the last invalid position.
  * Whenever we found the current position is valid, i - stack.peak if the length of the current valid parentheses.
  
- ```
+ ```java
     public int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<>();
         int max = 0;
@@ -140,7 +140,7 @@ If there are multiple such windows, you are guaranteed that there will always be
 * Use two points L,R. Move R to the position such that S[L..R] is a valid substring.
 * Try to shrink the window from L.
  
- ```
+ ```java
      public String minWindow(String s, String t) {
         int[] validHash = validHash(t);
         int[] hash = new int[256];

@@ -43,7 +43,7 @@ Notes:
 - for .*  : match 0 chars by push(i+1), push(j), j+2 (when resume the state from stack, maches 1 char)
 - RET : check the stack, if stack is empty return false, otherwise j=pop() i=pop(), resume to state, i, j
 
-```
+```java
     public boolean isMatch(String s, String p) {
         Stack<Integer> stack = new Stack<>();
         int i = 0; int j = 0;
