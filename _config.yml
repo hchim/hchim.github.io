@@ -18,4 +18,5 @@ biography:      'undefined'
 # post configs
 disqus: true
 recentPosts: true
+postCover: false
 

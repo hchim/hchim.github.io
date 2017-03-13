@@ -1,5 +1,7 @@
 ---
 layout: post
+categories: Leetcode Coding
+
 ---
 
 ### Distinct subsequence
