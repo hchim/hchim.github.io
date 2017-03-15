@@ -196,7 +196,7 @@ The code of unit test:
         test("hit", "cog", words, expected);
     
         String[] words2 = {"a", "b", "c"};
-        String[][] expected2 = {{"a", "c"}};
+        String[][] expected2 = { {"a", "c"} };
         test("a", "c", words2, expected2);
     }
     

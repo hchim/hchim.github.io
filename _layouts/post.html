@@ -1,16 +1,20 @@
 ---
 layout: default
+archive: false
 post_class: post-template
 ---
 
-<header class="main-header post-head {% if site.postCover %}" style="background-image: url({{ site.postCover }}) {%else%}no-cover{% endif %}">
-    <nav class="main-nav {% if site.postCover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.baseurl }}">Home</a>
-        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}feed.xml">Subscribe</a>
+<header class="main-header post-head {% if page.cover %}" style="background-image: url({{page.cover}}){%else%}no-cover{%endif%}">
+    <nav class="main-nav overlay clearfix">
+        {%if site.logo%}<a class="blog-logo" href="{{ site.baseurl }}"><img src="{{site.logo}}" alt="{{site.name}}" /></a>{%endif%}
+        {%if site.navigation %}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {% endif %}
     </nav>
 </header>
 
 <main class="content" role="main">
+
     <article class="post">
 
         <header class="post-header">
@@ -27,11 +31,11 @@ post_class: post-template
             {{content}}
         </section>
 
-        {% if site.recentPosts %}
+        {% if page.archive %}
         <section class="archive">
-            <h5>Recent Posts</h5>
+            <h5>Archive</h5>
             <ul>
-                {% for post in site.posts limit:3 %}
+                {% for post in site.posts %}
                     <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
@@ -43,15 +47,21 @@ post_class: post-template
             {% if site.author %}
                 <figure class="author-image">
                     <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile.png)">
-                    <span class="hidden">{{site.author}}'s Picture</span></a>
+                    <span class="hidden">{{ site.author }}'s Picture</span></a>
                 </figure>
                 <section class="author">
                     <!-- Author Name -->
                     <h4> {{ site.author }} </h4>
                     <!-- Author Bio -->
-                    <p>
-                        {{ site.biography }}
-                    </p>
+                    {%if site.bio %}
+                    <p>{{ site.bio }}</p>
+                    {% else %}
+                    <p>Read <a href="{{ site.baseurl }}">more posts</a> by this author.</p>
+                    {% endif %}
+                    <div class="author-meta">
+                    {%if site.location%}<span class="author-location icon-location">{{site.location}}</span>{%endif%}
+                    {%if site.website%}<span class="author-link icon-link"><a href="{{site.website}}">{{site.website}}</a></span>{%endif%}
+                    </div>
                 </section>
             {% endif %}
 
@@ -68,3 +78,22 @@ post_class: post-template
     </article>
 
 </main>
+
+<aside class="read-next">
+  {%if page.next%}
+  <a class="read-next-story {%if page.next.cover%}" style="background-image: url({{page.next.cover}}){%else%}no-cover{%endif%}" href="{{page.next.url}}">
+      <section class="post">
+          <h2>{{page.next.title}}</h2>
+          <p>{{ page.next.excerpt | truncatewords: 19 | strip_html}}&hellip;</p>
+      </section>
+  </a>
+  {%endif%}
+  {%if page.previous%}
+  <a class="read-next-story prev {%if page.previous.cover%}" style="background-image: url({{page.previous.cover}}){%else%}no-cover{%endif%}" href="{{page.previous.url}}">
+      <section class="post">
+          <h2>{{page.previous.title}}</h2>
+          <p>{{ page.previous.excerpt | truncatewords: 19 | strip_html}}&hellip;</p>
+      </section>
+  </a>
+  {%endif%}
+</aside>

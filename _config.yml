@@ -1,22 +1,30 @@
-# Site settings
 name: Hui's Page
-description: 'Happy coding!!!'
+description: Happy coding!!!
+meta_description: "..."
 
 markdown: kramdown
 highlighter: pygments
 logo: false
-paginate: 5
+paginate: 10
 baseurl: /
 domain_name: 'http://blog.hch.im'
+google_analytics: 'UA-XXXXXXXX-X'
+
 gems: [jekyll-paginate]
 
+navigation:
+  - label: Home
+    url: /
+  - label: About
+    url: /about.html
+
 # Details for the RSS feed generator
-url:            'http://blog.hch.im'
-author:         'Hui Chen'
-biography:      'undefined'
+url: 'http://blog.hch.im'
+author: 'Hui Chen'
+bio: 'I am a software engineer!'
+location: Beatiful Irvine
+website: http://blog.hch.im
 
-# post configs
+# disque
 disqus: true
-recentPosts: true
-postCover: false
-
+disqus_shortname: huis-page
