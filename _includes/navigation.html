@@ -13,7 +13,7 @@
     <ul class="category">
         {% for category in site.categories %}
         <li class="{%if current%} nav-current{%endif%}" role="presentation">
-            <a href="{{base_url}}/categories/{{ category | first}}/">
+            <a href="{{base_url}}/cats/{{ category | first}}/">
                 {{ category | first }}
             </a>
         </li>
