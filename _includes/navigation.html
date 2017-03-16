@@ -8,6 +8,19 @@
             <li class="{%if current%} nav-current{%endif%}" role="presentation"><a href="{{nav.url}}">{{nav.label}}</a></li>
         {% endfor %}
     </ul>
+
+    <h3 class="cat-title">Category</h3>
+    <ul class="category">
+        {% for category in site.categories %}
+        <li class="{%if current%} nav-current{%endif%}" role="presentation">
+            <a href="{{base_url}}/categories/{{ category | first}}/">
+                {{ category | first }}
+            </a>
+        </li>
+        {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+    </ul>
+
     <a class="subscribe-button icon-feed" href="/rss.xml">Subscribe</a>
 </div>
 <span class="nav-cover"></span>

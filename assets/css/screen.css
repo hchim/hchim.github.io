@@ -595,6 +595,15 @@ body.nav-opened .nav {
     outline: 0;
 }
 
+.cat-title {
+    position: relative;
+    left: 30px;
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 .nav-close:before,
 .nav-close:after {
     content: '';
@@ -627,6 +636,12 @@ body.nav-opened .nav {
 
 .nav ul {
     padding: 90px 9% 5%;
+    list-style: none;
+    counter-reset: item;
+}
+
+.nav ul.category {
+    padding: 10px 9% 5%;
     list-style: none;
     counter-reset: item;
 }
