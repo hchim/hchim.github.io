@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [array]
+
 ---
 
 ### Best Time to Buy and Sell Stock I

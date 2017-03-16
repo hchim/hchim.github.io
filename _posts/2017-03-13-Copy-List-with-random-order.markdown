@@ -1,6 +1,8 @@
 ---
 layout: post
 categories: Leetcode
+tags: [linked-list]
+
 ---
 
 A linked list is given such that each node contains an additional random pointer which could point to 

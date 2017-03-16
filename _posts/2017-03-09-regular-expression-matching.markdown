@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [string]
+
 ---
 
 Implement regular expression matching with support for '.' and '*'.

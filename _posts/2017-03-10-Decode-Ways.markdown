@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [permutation]
+
 ---
 
 A message containing letters from A-Z is being encoded to numbers using the following mapping:

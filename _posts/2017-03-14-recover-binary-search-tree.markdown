@@ -1,6 +1,8 @@
 ---
 layout: post
 categories: Leetcode
+tags: [binary-tree]
+
 ---
 
 Two elements of a binary search tree (BST) are swapped by mistake.

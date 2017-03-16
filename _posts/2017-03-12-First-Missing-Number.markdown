@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [array]
+
 ---
 
 Given an unsorted integer array, find the first missing positive integer.

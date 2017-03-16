@@ -1,6 +1,7 @@
 ---
 layout: post
-categories: Leetcode Coding
+categories: Leetcode
+tags: [string, dynamic-programming]
 
 ---
 

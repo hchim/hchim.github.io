@@ -1,6 +1,8 @@
 ---
 layout: post
 categories: Leetcode
+tags: [binary-tree]
+
 ---
 
  Given a binary tree

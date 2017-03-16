@@ -1,6 +1,8 @@
-
 ---
 layout: post
+categories: Leetcode
+tags: [array]
+
 ---
 
 Given an array of integers, find k numbers such that the summation of them is equal to a target number.

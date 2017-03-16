@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [array, optimization]
+
 ---
 
 There are N children standing in a line. Each child is assigned a rating value. You are giving candies to these children subjected to the following requirements:

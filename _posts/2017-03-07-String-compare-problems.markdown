@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [string, array]
+
 ---
 
 ### Longest common prefix

@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [string]
+
 ---
 
 Given a string s, partition s such that every substring of the partition is a palindrome.

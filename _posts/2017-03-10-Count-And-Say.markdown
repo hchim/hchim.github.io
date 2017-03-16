@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: []
+
 ---
 
 “The count-and-say sequence is the sequence of integers beginning as follows:

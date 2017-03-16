@@ -1,6 +1,8 @@
 ---
 layout: post
 categories: Leetcode
+tags: [array]
+
 ---
 
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence. 

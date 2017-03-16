@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [array]
+
 ---
 
 The solution of this problem is like a tree. We can use depth first search to find out the solutions on each branch.

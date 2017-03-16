@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Home
 cover: false
 ---
 
@@ -9,22 +8,16 @@ cover: false
 
     <div class="vertical">
         <div class="main-header-content inner">
-            <h1 class="page-title">{{site.name}}</h1>
-            <h2 class="page-description">{{site.description}}</h2>
+            <h1 class="page-title">Tag: {{page.title}}</h1>
         </div>
     </div>
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 </header>
 
-
 <main id="content" class="content" role="main">
-    <div class="extra-pagination inner">
-        {% include pagination.html %}
-    </div>
-
-    {% for post in paginator.posts %}
-        {% include post-item.html %}
-    {% endfor %}
-
-    {% include pagination.html %}
+    {% if site.tags[page.title] %}
+        {% for post in site.tags[page.title] %}
+            {% include post-item.html %}
+        {% endfor %}
+    {% endif %}
 </main>

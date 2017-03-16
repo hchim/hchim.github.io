@@ -1,5 +1,8 @@
 ---
 layout: post
+categories: Leetcode
+tags: [array]
+
 ---
 
 There are two sorted arrays nums1 and nums2 of size m and n respectively.
