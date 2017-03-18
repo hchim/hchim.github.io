@@ -5,6 +5,7 @@ meta_description: "..."
 markdown: kramdown
 highlighter: pygments
 logo: false
+cover: '/assets/images/cover.jpg'
 paginate: 10
 baseurl: /
 domain_name: 'http://blog.hch.im'

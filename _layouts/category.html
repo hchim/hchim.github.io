@@ -1,9 +1,9 @@
 ---
 layout: default
-cover: false
+
 ---
 
-<header class="main-header {%if page.cover%}" style="background-image: url({{page.cover}}){%else%}no-cover{%endif%}">
+<header class="main-header post-head {%if site.cover%}" style="background-image: url({{site.cover}}){%else%}no-cover{%endif%}">
     {% include nav.html %}
 
     <div class="vertical">
