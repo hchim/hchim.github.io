@@ -1,5 +1,5 @@
 ---
 layout: tag
-title: string
-permalink: /tags/string/
+title: String
+permalink: /tags/String/
 ---
