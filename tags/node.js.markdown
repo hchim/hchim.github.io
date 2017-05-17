@@ -1,5 +1,5 @@
 ---
 layout: tag
-title: node.js
-permalink: /tags/node.js/
+title: Node.js
+permalink: /tags/Node.js/
 ---
