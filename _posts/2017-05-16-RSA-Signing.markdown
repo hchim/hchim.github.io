@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [Security]
+categories: Security
 tags: [RSA, Java]
 
 ---
