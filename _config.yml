@@ -18,6 +18,8 @@ navigation:
     url: /
   - label: About
     url: /about.html
+  - label: Useful Links
+    url: /links.html
 
 # Details for the RSS feed generator
 url: 'http://hchim.github.io'
