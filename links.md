@@ -12,7 +12,6 @@ title: Useful Links
 - [OkHttp](http://square.github.io/okhttp/): An HTTP & HTTP/2 client for Android and Java applications.
 - [Butter Knife](http://jakewharton.github.io/butterknife/): A library and tool for field and method binding for Android views.
 - [sbt](http://www.scala-sbt.org/index.html): An interactive build tool.
-- [chart.js](http://www.chartjs.org/docs/): A javascript library to drawing charts.
 
 #### JavaScript/Node.js
 
@@ -20,7 +19,8 @@ title: Useful Links
 - [bower](https://bower.io/): Bower is a package manager for web development.
 - [PM2](http://pm2.keymetrics.io/docs/usage/quick-start/): process manager for Node.js applications.
 - [Grunt](https://gruntjs.com/): A javascript task runner.
-
+- [bluebird](http://bluebirdjs.com/docs/getting-started.html): Bluebird is a fully featured JavaScript promises library with unmatched performance.
+- [chart.js](http://www.chartjs.org/docs/): A javascript library to drawing charts.
 
 #### Distributed systems
 
