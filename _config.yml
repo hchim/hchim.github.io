@@ -12,7 +12,7 @@ domain_name: 'http://hchim.github.io'
 google_analytics: 'UA-XXXXXXXX-X'
 mathjax: true
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 navigation:
   - label: Home
