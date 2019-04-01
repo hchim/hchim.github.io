@@ -407,3 +407,71 @@ neuron is either low activation ($$\approx 0$$) or high activation ($$\approx 1$
 1. Output: the gradient of the cost function is given by $$\frac{\partial C}{\partial w_{jk}^l} = a_k^{l-1} \delta _j^l$$ and
    $$\frac{\partial C}{\partial b_j^l} = \delta _j^l$$.
    
+# Improving the way neural networks learn
+
+The backpropogation algorithm we described earlier is the foundation for neural networks to learn, we can use several techniques to
+improve the way neural networks learn. There techniques include: 
+
+- cross-entropy function
+- four regularization methods
+  - L1 regularization
+  - L2 regularization
+  - dropout
+  - artifical expansion of the training data
+- A better method for initializing the weights in the network
+- A set of heuristics to help choose good hyper-parameters for the network
+
+## Cross-entropy cost function
+
+We hope our neuron networks learn from their errors fast, however for the quadratic cost function the learning speech is dependent
+on the initial values of weights and parameters. Let's use a simple neuron as the example. 
+
+![Simple Neuron](/assets/images/simple-neuron.png)
+
+We will train the neuron to take the input 1 and output 0. For the same learning rate $$\eta = 0.15$$, if the initial values of
+weight w and bias b is different the learning speech may significantly different. We can see that example 2 learns very slowly (
+the value of cost function decreases very slowly). It shows that when the result is badly wrong, our neural network cannot learn
+from the error fast.
+
+![Example 1](/assets/images/learn-1.png)
+
+![Example 2](/assets/images/learn-2.png)
+
+The neural network learns by changing the weights and biases at a rate determined by the partial derivatives of the cost function,
+$$\partial C / \partial w$$ and $$\partial C / \partial b$$. For this simple example, we have
+
+$$
+C = \frac {(y-a)^2}{2} \\
+a = \sigma (z) \\
+z = wx +b \\
+\frac {\partial C}{\partial w} = (a - y)\sigma '(z)x = a \sigma '(z) \\
+\frac {\partial C}{\partial b} = (a - y)\sigma '(z) = a \sigma '(z) \\
+x = 1 \\
+y = 0 \\
+$$
+
+From the shape of the sigmoid function we know that when the output is close to 1, the curve gets very flat, so $$\sigma ' (z)$$
+gets very small. This is the origin of learning slowdown. The cross-entropy cost function can help use to solve this problem. We 
+define this cost function as follows:
+
+$$
+C = - \frac{1}{n} \sum _x [y ln a + (1 - y)ln (1 - a)]
+$$
+
+Replacing $$a$$ with $$\sigma (z)$$, we have
+
+$$
+\frac{\partial C}{\partial w_j} = - \frac{1}{n} \sum _x (\frac{y}{\sigma (z)} - \frac{(1-y)}{1- \sigma (z)}) \frac {\partial \sigma}{\partial w_j} \\
+                                = - \frac{1}{n} \sum _x (\frac{y}{\sigma (z)} - \frac{(1-y)}{1- \sigma (z)}) \sigma '(z) x_j \\
+                                =  \frac{1}{n} \sum _x \frac{\sigma '(z) x_j}{\sigma (z) (1 - \sigma (z))} (\sigma (z) - y) \\
+                                = \frac{1}{n} \sum _x x_j (\sigma (z) - y)
+$$
+
+This equation shows the learning rate is controlled by the error in the output. In addition, the $$\sigma '(z)$$ part was canceled out
+from the equation, we do not need to worry about it being small. Similarly, we get
+
+$$
+\frac{\partial C}{\partial b} = \frac{1}{n} \sum _x (\sigma (z) - y)
+$$
+
+
