@@ -3,7 +3,7 @@ description: Happy coding!!!
 meta_description: "..."
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 logo: false
 cover: '/assets/images/cover.jpg'
 paginate: 10
