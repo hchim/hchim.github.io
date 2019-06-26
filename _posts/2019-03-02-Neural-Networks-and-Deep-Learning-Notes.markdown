@@ -474,4 +474,20 @@ $$
 \frac{\partial C}{\partial b} = \frac{1}{n} \sum _x (\sigma (z) - y)
 $$
 
+## Softmax
+
+The idea of **softmax** is to define a new type of output layer for our neural networks. Different with sigmoid neuron we apply
+the softmax function the the weighted input $$z_j^L$$. 
+
+$$
+a_j^L = \frac{e^{z_j^L}}{\sum_k e^{z_k^L}}
+$$
+
+Assume the softmax layer has n inputs $$z_1^L, ..., z_n^L$$.
+If we increase one of the input $$z_i^L$$, the output $$a_i^L$$ will increase and all the other outputs will decrease. On the 
+contrary, if we decreases $$z_i^L$$, the output $$a_k^L$$ will decrease and all the other outputs will increase.
+**The output activations are guaranteed to always sum up to 1**. The output of the softmax layer can be though of as a probability
+distribution. 
+
+### How does the softmax layer address the learning slowdown problem?
 
